@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 export default function Footer() {
   return (
     <footer className="bg-white border-y">
@@ -21,14 +21,28 @@ export default function Footer() {
               </h2>
               <ul className="text-gray-500 font-medium">
                 <li className="mb-4">
-                  <Link to="/" className="hover:underline">
+                  <NavLink
+                    to="/"
+                    className={({ isActive }) =>
+                      `block py-2 pr-4 pl-3 ${
+                        isActive ? "text-orange-700" : "text-gray-700"
+                      } duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                    }
+                  >
                     Home
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="/about" className="hover:underline">
+                  <NavLink
+                    to="/about"
+                    className={({ isActive }) =>
+                      `block py-2 pr-4 pl-3 ${
+                        isActive ? "text-orange-700" : "text-gray-700"
+                      } duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                    }
+                  >
                     About
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
             </div>
