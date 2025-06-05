@@ -29,7 +29,7 @@ function Github() {
 export default Github;
 
 
-// better approach
+// better approach it will load whole data from fetching on cursor hover on the link
 export const githubInfoLoader = async () => {
   const response = await fetch("https://api.github.com/users/MBadarMurtaza");
   return response.json();
