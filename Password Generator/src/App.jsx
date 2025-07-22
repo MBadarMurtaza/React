@@ -7,6 +7,7 @@ function App() {
   const [Password, setPassword] = useState("");
   const passwordRef=useRef(null);
   const copyToClipboard = useCallback(() => {
+    // select and copy to clipboard
   if (passwordRef.current) {
     passwordRef.current.select();
     passwordRef.current.setSelectionRange(0, Password.length);
